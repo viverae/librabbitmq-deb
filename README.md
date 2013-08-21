@@ -5,12 +5,8 @@ Since the debian package building has been [removed from the rabbitmq-c repo](ht
 
 # Requirements
 
-This has been tested on Ubuntu Precise 12.04.3 LTS 64-bit
-
-# Usage
-
-It uses your git config to determin the e-mail and name to use in the debian change log. This is useful to know who build the package in a more automated way, but I recognize that this may not work for everyone. I am open to suggestions on how to make this (or any other parts of) this code better.
-
+This has been tested on Ubuntu Precise 12.04.3 LTS 64-bit.
+It uses your git config to determine the e-mail and name to use in the debian change log. This is useful to know who build the package in a more automated way, but I recognize that this may not work for everyone. I am open to suggestions on how to make this (or any other parts of) this code better.
 
 It assumes that you have a debian build environment installed. Which can be accomplished
 
@@ -18,8 +14,9 @@ It assumes that you have a debian build environment installed. Which can be acco
 apt-get install devscripts dh-make fakeroot build-essential linux-headers-`uname -r` git-buildpackage
 `````
 
-Currently, the way we build is by using the following command line:
+# Usage
 
+Currently, the way we build is by using the following command line:
 
 ````` bash
 GPG_KEY=XXXXXX GPG_MAINTAINER=gpgkey@example.com ./build.sh
